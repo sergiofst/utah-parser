@@ -58,7 +58,7 @@ public class ValueRegex extends NameValue {
       String lineRegex = translate(getValue(), searches);
       String regex = String.format(".*?%s.*", lineRegex);
       try {
-        Pattern valuePattern = Pattern.compile(regex, Pattern.DOTALL);
+        Pattern valuePattern = Pattern.compile(regex);
         validatePattern(valuePattern);
         compiledPattern = valuePattern;
       } catch (PatternSyntaxException e) {

@@ -97,7 +97,7 @@ public class Delimiter {
    * @return true if we need to retain the delimiter, false otherwise.
    */
   public boolean isRetainDelim() {
-    return isRetainDelim || isDelimAtStartOfRecord();
+    return isRetainDelim && isDelimAtStartOfRecord();
   }
 
 

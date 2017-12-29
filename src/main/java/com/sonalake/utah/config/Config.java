@@ -110,7 +110,7 @@ public class Config {
       Map<String, String> result = new TreeMap<String, String>();
       for (ValueRegex valueRegex : values) {
         Matcher matcher = valueRegex.buildMatcher(text);
-        if (matcher.matches()) {
+        if (matcher.find()) {
           String valueText = matcher.group(valueRegex.getGroup());
           result.put(valueRegex.getId(), valueText);
         }

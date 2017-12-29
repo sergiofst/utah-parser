@@ -1,0 +1,37 @@
+<!--
+REGISTRO PATRONAL  ,Y373915810,-,7   ,CURP/RFC,         /CEF061016ENA
+NOMBRE
+CEFINPRO, S.A. DE C.V.
+ACTIVIDAD           ,SERVICIOS DE ASESORIA ADMINISTRACION Y
+DOMICILIO           ,PINO SUAREZ 1202 3 INT PISO A CENTTRO
+LOCALIDAD           ,MONTERREY NUEVO LEON                  ,C.P. ,64000
+
+REGISTRO PATRONAL  ,D501731210,-,3   ,CURP/RFC,           /HGO831024I98
+NOMBRE
+HOSP DE GINECOLOGIA Y OBSTR
+ACTIVIDAD           ,SERVICIOS MEDICOS
+DOMICILIO           ,HIDALGO              - 1842
+LOCALIDAD           ,OBISPADO MTY N L        A36           ,C.P. ,64090
+-->
+<config>
+    <searches>
+        <search id="regPatSearch"><![CDATA[REGISTRO PATRONAL.*,[0-9A-Z]*,-,[0-9].*,CURP\/RFC,]]></search>
+        <search id="regPat"><![CDATA[REGISTRO PATRONAL.*,([0-9A-Z]*),-,[0-9].*,CURP\/RFC,]]></search>
+        <search id="curpRfc"><![CDATA[CURP\/RFC,.*\/(\w*)]]></search>
+        <search id="nombre"><![CDATA[NOMBRE[\r\n]+([^\r\n]+)]]></search>
+        <search id="actividad"><![CDATA[ACTIVIDAD.*,([\w].*)]]></search>
+        <search id="domicilio"><![CDATA[DOMICILIO.*,([\w].*)]]></search>
+        <search id="localidad"><![CDATA[LOCALIDAD.*,([\w].*),C.P.]]></search>
+        <search id="cp"><![CDATA[C.P. ,(\d+)]]></search>
+    </searches>
+    <delim at-start="true">^{regPatSearch}.*</delim>
+    <values>
+        <value id="registroPatronal" ><![CDATA[{regPat}]]></value>
+        <value id="curpRfc"><![CDATA[{curpRfc}]]></value>
+        <value id="nombre"><![CDATA[{nombre}]]></value>
+        <value id="actividad"><![CDATA[{actividad}]]></value>
+        <value id="domicilio"><![CDATA[{domicilio}]]></value>
+        <value id="localidad"><![CDATA[{localidad}]]></value>
+        <value id="cp"><![CDATA[{cp}]]></value>
+    </values>
+</config>

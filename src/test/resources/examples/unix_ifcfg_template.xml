@@ -1,7 +1,7 @@
 <config>
     <searches>
 
-        <search id="interface"><![CDATA[(\S{2}\d):]]></search>
+        <search id="interface"><![CDATA[SERGIO (\S{2}\d):]]></search>
         <search id="mac"><![CDATA[([\d\w:]+)]]></search>
         <search id="inet6"><![CDATA[([^%]+)]]></search>
         <search id="inet4"><![CDATA[([\d\.]+)]]></search>

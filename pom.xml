@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sonalake</groupId>
     <artifactId>utah-parser</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>Utah Parser</name>
     <description>A Java library for parsing semi-structured text files</description>
     <url>https://github.com/sonalake/utah-parser</url>
@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Allow for a dev user to skip the signing part by setting this to true-->
-        <skipGpgSign>false</skipGpgSign>
+        <skipGpgSign>true</skipGpgSign>
     </properties>
 
     <licenses>
@@ -35,8 +35,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
